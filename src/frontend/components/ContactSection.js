@@ -26,6 +26,7 @@ const ContactSectionStyle = styled.div`
   }
   .left {
     width: 80%;
+
     max-width: 700px;
   }
   .right {

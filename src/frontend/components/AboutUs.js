@@ -1,8 +1,17 @@
 import React  from "react";
 import "./style/AboutUs.css"
+import { useNavigate } from "react-router-dom";
 import Contact from "./Contact"
 
+import EtherIcon from './Images/ether.svg';
+
 const AboutUs = () => {
+  let navigate = useNavigate();
+
+  const goExplore = () => {
+    navigate("/explore");
+  };
+
   return (
     // <div className="container-fluid mt-5">
       <div>
@@ -19,18 +28,17 @@ const AboutUs = () => {
               <div className="row">
                 <div className="about-text" data-aos="fade-right">
                   <h3>Welcome To Dot.. organisation</h3>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quam vitae tempore. Aliquid, voluptates ducimus!LoremIllo quam vitae tempore. Aliquid, voluptates ducimus!</p>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quam vitae tempore. Aliquid, voluptates ducimus!LoremIllo quam vitae tempore. Aliquid, voluptates ducimus!</p>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique illum a cum dicta rerum laboriosam nihil nulla eligendi expedita magnam facilis voluptas, aspernatur consequuntur et?</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, aliquam! Voluptatibus natus aspernatur quidem iusto ipsam, ratione, et veniam aliquid impedit molestias ea explicabo blanditiis!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quis dolore non saepe explicabo unde aperiam recusandae alias dicta atque, quaerat facilis distinctio doloribus quisquam?</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum, deserunt, nisi esse sequi, molestiae vitae quae quibusdam aspernatur corporis excepturi nemo ea illo ratione?</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nulla debitis accusamus exercitationem, vero ullam!</p>
-                  <a href="#explore" className="btn btn-default">Explore more</a>
+                  <p>In our project we are trying to create a decentralized platform based on NFT so that we can make NFT’s of Chandigarh University based on blockchain technology using Etherium Smart- Contract. This will not only help in tokenization but enhance security as these NFT’s are immutable with smooth and speedy transactions.</p>
+                  <p>Our Mission</p>
+                  <p>With the fast growing digital era it’s the urge of time for us to shift to decentralization, web3, and secured environment so we are planning to start a web3 based environment in our university.</p>
+                  <p>Our Vision</p>
+                  <p>To regularly collaborate with Management of University to help each and every department in their respective domain using the growing web3, Blockchain Technology through our Decentralized Application </p>
+                  <p>All in all,  we would like to point out that the NFT markets represent an excellent and profitable market for all designers, crypto fans, and business owners. We only encourage you to be focused, make educated judgments, and be consistent, since any new platform, and designers in particular, may take time to succeed.</p>
+                  <button onClick={goExplore} className="btn btn-default">Explore more</button>
                 </div>
                 <div className="about-img" data-aos="fade-left">
                   <div className="img-box">
-                    <img className="coverImg" src={require('./Images/cover.jpg')} />
+                    <img className="coverImg" src={EtherIcon} />
                   </div>
                 </div>
               </div>

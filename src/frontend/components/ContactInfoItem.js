@@ -6,7 +6,7 @@ import PText from './PText';
 const ItemStyles = styled.div`
   padding: 2rem;
   height: 30px;
-  background-color: rgb(255, 0, 183);
+  background-color: #615b5e;
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -26,6 +26,8 @@ const ItemStyles = styled.div`
   svg {
     width: 3.5rem;
   }
+
+  
 `;
 
 export default function ContactInfoItem({

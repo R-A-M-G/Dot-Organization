@@ -46,12 +46,13 @@ export default function MyPurchases({ marketplace, nft, account }) {
     <div className="flex justify-center">
       {purchases.length > 0 ?
         <div className="px-5 container">
+          <h2>My Purchased Items :</h2>
           <Row xs={1} md={2} lg={4} className="g-4 py-5">
             {purchases.map((item, idx) => (
               <Col key={idx} className="overflow-hidden">
                 <Card>
                   <Card.Img variant="top" src={item.image} />
-                  <Card.Footer>{ethers.utils.formatEther(item.totalPrice)} DTP</Card.Footer>
+                  <Card.Footer style={{color: "black"}} >{ethers.utils.formatEther(item.totalPrice)} DTP</Card.Footer>
                 </Card>
               </Col>
             ))}

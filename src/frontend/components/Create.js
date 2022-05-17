@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ethers } from "ethers"
-import { Row, Form, Button } from 'react-bootstrap'
+import { Col, Row, Form, Button } from 'react-bootstrap'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import "./style/Create.css"
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
@@ -52,22 +52,30 @@ const Create = ({ marketplace, nft }) => {
                 <main role="main" className="col-lg-12 mx-auto" style={{ maxWidth: '1000px' }}>
                     <div className="content mx-auto">
                       <h2 id='Head' >Mint Your NFT's Here</h2>
-                        <Row className="g-4">
-                        <Form.Control
-                            type="file"
-                            required
-                            name="file"
-                            onChange={uploadToIPFS}
-                        />
-                        <Form.Control onChange={(e) => setName(e.target.value)} size="lg" required type="text" placeholder="Name" />
-                        <Form.Control onChange={(e) => setDescription(e.target.value)} size="lg" required as="textarea" placeholder="Description" />
-                        <Form.Control onChange={(e) => setPrice(e.target.value)} size="lg" required type="number" placeholder="Price in DTP" />
-                        <div className="d-grid px-0">
-                            <Button className='btns' onClick={createNFT} variant="primary" size="lg">
-                            Create & List NFT!
-                            </Button>
-                        </div>
-                        </Row>
+                        
+                          <Row className="g-4">
+                          <Col id='left' >
+                          <img id='NFTIcon' src={require('./Images/NFTIcon.png')}></img>
+                          </Col>
+                          <Col id='right'>
+                          <Row className="g-4">
+                          <Form.Control
+                              type="file"
+                              required
+                              name="file"
+                              onChange={uploadToIPFS}
+                          />
+                          <Form.Control onChange={(e) => setName(e.target.value)} size="lg" required type="text" placeholder="Name" />
+                          <Form.Control onChange={(e) => setDescription(e.target.value)} size="lg" required as="textarea" placeholder="Description" />
+                          <Form.Control onChange={(e) => setPrice(e.target.value)} size="lg" required type="number" placeholder="Price in DTP" />
+                          <div className="d-grid px-0">
+                              <Button className='btns' onClick={createNFT} variant="primary" size="lg">
+                              Create & List NFT!
+                              </Button>
+                          </div>
+                          </Row>
+                          </Col>
+                          </Row>
                     </div>
                 </main>
             </div>

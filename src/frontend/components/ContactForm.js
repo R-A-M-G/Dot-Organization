@@ -30,11 +30,11 @@ const FormStyle = styled.form`
     resize: vertical;
   }
   button[type='submit'] {
-    background-color: rgb(255, 0, 183);
+    background-color: #615b5e;
     padding-bottom: 2rem;
     line-height: 0px;
     width: 280px;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 2rem;
     display: inline-block;
@@ -43,6 +43,11 @@ const FormStyle = styled.form`
     padding: 2rem;
     border-radius: 30px;
     cursor: pointer;
+  }
+
+  button[type='submit']:hover{
+    background-color: white;
+    color: black;
   }
 `;
 

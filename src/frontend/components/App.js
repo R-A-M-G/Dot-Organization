@@ -12,6 +12,8 @@ import MyPurchases from './MyPurchases'
 import AboutUs from './AboutUs'
 import Explore from './Explore';
 import NFTDrag from './NFTDrag.tsx';
+import Login from './Login'
+import Register from './Register'
 import Page404 from './Page_404'
 
 import { useState, useEffect } from 'react';
@@ -77,6 +79,16 @@ function App() {
           ) : (
             <Routes>
               <Route path="/" element={
+                // <Home marketplace={marketplace} nft={nft} />
+                <Login />
+              } />
+              <Route path="/login" element={
+                <Login />
+              } />
+              <Route path="/register" element={
+                <Register />
+              } />
+              <Route path="/home" element={
                 <Home marketplace={marketplace} nft={nft} />
               } />
               <Route path="/create" element={
